@@ -13,7 +13,7 @@ DSH 右下角的一部小手机：点圆按钮弹出来，桌面上排着应用�
 从 GitHub：
 
 ```sh
-dsh plugin add github:<你的用户名>/dsh-phone
+dsh plugin add github:World-false/dsh-phone
 ```
 
 从本地目录（开发时用）：
