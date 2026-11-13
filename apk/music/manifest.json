@@ -1,0 +1,11 @@
+{
+  "id": "music",
+  "name": { "zh": "音乐", "en": "Music" },
+  "version": "1.0.0",
+  "entry": "main.js",
+  "icon": "icon.svg",
+  "api": 1,
+  "permissions": ["host", "storage"],
+  "backend": "dsh-music",
+  "description": "搜歌、播放、滚动歌词，还能自己建歌单。"
+}

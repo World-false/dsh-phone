@@ -43,6 +43,36 @@ dsh plugin add <这个目录的绝对路径>
 
 ---
 
+## 自带的应用包
+
+`apk/` 里放着两个已经打好的应用，下载下来直接拖到手机上就能装：
+
+| 包 | 是什么 | 权限 |
+|---|---|---|
+| [apk/note-book.dshapp](apk/note-book.dshapp) | 便签本，写一句话就记住 | `storage` |
+| [apk/music.dshapp](apk/music.dshapp) | 音乐，搜歌、播放、滚动歌词（**要装 `dsh-music` 插件才放得出歌**） | `host`、`storage` |
+
+每个包旁边还有一个同名文件夹，里面是这个应用的完整源码，单独拿出来就是一个 MIT 项目：
+
+```
+apk/
+├── note-book/          源码：manifest.json、main.js、icon.svg、LICENSE、README.md
+├── note-book.dshapp    note-book/ 打出来的成品
+├── music/              同上
+└── music.dshapp
+```
+
+改完源码重新打包：
+
+```sh
+node dev/pack-apk.mjs note-book
+node dev/pack-apk.mjs music
+```
+
+不带参数就两个都打。
+
+---
+
 ## 写一个自己的应用
 
 应用是一个普通 zip，把后缀改成 `.dshapp`，里面三样东西：
